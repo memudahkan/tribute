@@ -24,7 +24,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  animation: 60s credits linear infinite;
+  animation: 150s credits linear infinite;
 }
 
 .movie {
@@ -48,6 +48,6 @@ body {
   }
 
   100% {
-    top: -200%;
+    top: -350%;
   }
 }
