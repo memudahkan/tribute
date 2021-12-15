@@ -24,12 +24,12 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  animation: 150s credits linear infinite;
+  animation: 90s credits linear infinite;
 }
 
-.movie {
+.movie, .logo {
   margin-bottom: 50px;
-  font-size: 43px;
+  font-size: 45px;
 }
 
 .job {
@@ -48,6 +48,6 @@ body {
   }
 
   100% {
-    top: -350%;
+    top: -400%;
   }
 }
