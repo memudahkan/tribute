@@ -28,8 +28,8 @@ body {
 }
 
 .logo img {
-  width:75px;
-  height:75px;
+  width:90px;
+  height:90px;
 }
 
 .movie, .logo {
@@ -46,6 +46,10 @@ body {
   margin-bottom: 50px;
   font-size: 35px;
 }
+
+.senyum {
+  margin-top:100px;
+}    
 
 @keyframes credits {
   0% {
