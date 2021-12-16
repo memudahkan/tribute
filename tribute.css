@@ -27,6 +27,11 @@ body {
   animation: 90s credits linear infinite;
 }
 
+.logo img {
+  width:75px;
+  height:75px;
+}
+
 .movie, .logo {
   margin-bottom: 50px;
   font-size: 45px;
