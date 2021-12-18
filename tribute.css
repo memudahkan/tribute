@@ -12,6 +12,11 @@ html, body {
 body {
   background:#000;
   overflow: hidden;
+  user-select:none;
+ -moz-user-select:none;
+ -ms-user-select:none;
+ -khtml-user-select:none;
+ -webkit-user-select:none;
 }
 
 .wrapper {
