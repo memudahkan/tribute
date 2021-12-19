@@ -91,11 +91,18 @@
     </div>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
 
-<audio id="track" autoplay="autoplay" loop="loop" muted>
-    <source src="https://memudahkan.github.io/tribute/suara/bensound-slowmotion.mp3" type="audio/mpeg" />
+<script>
+    function togglePlay() {
+    var myAudio = document.getElementById("track");
+    return myAudio.paused ? myAudio.play() : myAudio.pause();
+    };
+</script>
+
+<audio id='track' loop>
+    <source src='https://memudahkan.github.io/tribute/suara/bensound-slowmotion.mp3' type='audio/mpeg' />
 </audio>
 
-<div class='unmute' onclick="document.getElementById('track').muted = !document.getElementById('track').muted;$(this).toggleClass('mute')"></div>
+<div class='unmute' onclick="togglePlay();$(this).toggleClass('mute')"></div>
 </body>
 
 </html>
