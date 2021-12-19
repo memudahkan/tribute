@@ -116,6 +116,11 @@ function toggleFullscreen(elem) {
       document.webkitExitFullscreen();
     }
   }
+}
+
+document.getElementById('btnFullscreen').addEventListener('click', function() {
+  toggleFullscreen();
+});
 </script>
     
 <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
@@ -132,7 +137,7 @@ function toggleFullscreen(elem) {
 </audio>
 
 <div class='mute' onclick="togglePlay();$(this).toggleClass('unmute')"></div>
-<div class='full' onclick="toggleFullscreen(elem);$(this).toggleClass('exitfull')"></div>    
+<div id='btnFullscreen' class='full' onclick="$(this).toggleClass('exitfull')"></div>    
 
 </body>
 
