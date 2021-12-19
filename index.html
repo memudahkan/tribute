@@ -87,6 +87,13 @@
         <div class="name">- Terima kasih -</div>
         <div class="name senyum">😊</div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<audio id="track" autoplay="autoplay" loop="loop" muted>
+    <source src="https://memudahkan.github.io/tribute/suara/bensound-slowmotion.mp3" type="audio/mp3" />
+</audio>
+
+<div class='unmute' onclick="document.getElementById('track').muted = !document.getElementById('track').muted;$(this).toggleClass('mute')"></div>
 </body>
 
 </html>
