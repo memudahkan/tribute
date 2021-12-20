@@ -94,10 +94,10 @@
 function toggleFullScreen() {
    var doc = window.document;
    var docEl = doc.documentElement;
-   var fullscreenOptions = {navigationUI: "hide"};
+   var hidenav = {navigationUI: "hide"};
 
-   var requestFullScreen = docEl.requestFullscreen(fullscreenOptions) || docEl.mozRequestFullScreen() || docEl.webkitRequestFullScreen() || docEl.msRequestFullscreen();
-   var cancelFullScreen = doc.exitFullscreen(fullscreenOptions) || doc.mozCancelFullScreen() || doc.webkitExitFullscreen() || doc.msExitFullscreen();
+   var requestFullScreen = docEl.requestFullscreen(hidenav) || docEl.mozRequestFullScreen() || docEl.webkitRequestFullScreen() || docEl.msRequestFullscreen();
+   var cancelFullScreen = doc.exitFullscreen(hidenav) || doc.mozCancelFullScreen() || doc.webkitExitFullscreen() || doc.msExitFullscreen();
 
    if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
        requestFullScreen.call(docEl);
