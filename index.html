@@ -123,6 +123,17 @@ function toggleFullScreen() {
 <audio id='track' loop>
     <source src='https://memudahkan.github.io/tribute/suara/bensound-slowmotion.mp3' type='audio/mpeg' />
 </audio>
+    
+<script>
+var loopCount = 0;
+
+document.getElementById('track').addEventListener('timeupdate', function () {
+    if (this.currentTime == 0)
+        ++loopCount;
+    if (loopCount == 2)
+        this.pause();
+});
+</script>
 
 <div class='mute' onclick="togglePlay();$(this).toggleClass('unmute')"></div>
 <div class='full' id='full' onclick="toggleFullScreen();$(this).toggleClass('exitfull')"></div>
