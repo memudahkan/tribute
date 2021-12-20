@@ -113,7 +113,7 @@ function toggleFullScreen() {
       var noSleep = new NoSleep();
 
       var wakeLockEnabled = false;
-      var toggleEl = document.querySelector(".full");
+      var toggleEl = document.querySelector("#full");
       toggleEl.addEventListener('click', function() {
         if (!wakeLockEnabled) {
           noSleep.enable(); // keep the screen on!
@@ -143,7 +143,7 @@ function toggleFullScreen() {
 </audio>
 
 <div class='mute' onclick="togglePlay();$(this).toggleClass('unmute')"></div>
-<div class='full' onclick="toggleFullScreen();$(this).toggleClass('exitfull')"></div>
+<div class='full' id='full' onclick="toggleFullScreen();$(this).toggleClass('exitfull')"></div>
 
 </body>
 
