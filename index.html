@@ -109,7 +109,25 @@ function toggleFullScreen() {
 </script>
     
 <script src='https://cdn.jsdelivr.net/gh/richtr/NoSleep.js@master/dist/NoSleep.min.js'></script>
+
+    
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+
 <script>
+    function togglePlay() {
+    var myAudio = document.getElementById("track");
+    return myAudio.paused ? myAudio.play() : myAudio.pause();
+    };
+</script>
+
+<audio id='track' loop>
+    <source src='https://memudahkan.github.io/tribute/suara/bensound-slowmotion.mp3' type='audio/mpeg' />
+</audio>
+
+<div class='mute' onclick="togglePlay();$(this).toggleClass('unmute')"></div>
+<div class='full' id='full' onclick="toggleFullScreen();$(this).toggleClass('exitfull')"></div>
+
+    <script>
       var noSleep = new NoSleep();
 
       var wakeLockEnabled = false;
@@ -129,22 +147,6 @@ function toggleFullScreen() {
       }, false);
     </script>
     
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
-
-<script>
-    function togglePlay() {
-    var myAudio = document.getElementById("track");
-    return myAudio.paused ? myAudio.play() : myAudio.pause();
-    };
-</script>
-
-<audio id='track' loop>
-    <source src='https://memudahkan.github.io/tribute/suara/bensound-slowmotion.mp3' type='audio/mpeg' />
-</audio>
-
-<div class='mute' onclick="togglePlay();$(this).toggleClass('unmute')"></div>
-<div class='full' id='full' onclick="toggleFullScreen();$(this).toggleClass('exitfull')"></div>
-
 </body>
 
 </html>
