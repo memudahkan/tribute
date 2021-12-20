@@ -125,14 +125,18 @@ function toggleFullScreen() {
 </audio>
     
 <script>
-var loopCount = 0;
-
-document.getElementById('track').addEventListener('timeupdate', function () {
-    if (this.currentTime == 0)
-        ++loopCount;
-    if (loopCount == 2)
-        this.pause();
-});
+ let maxLoops = 2;
+ let lastTime = 0;
+ let loops = 0;
+ audio.addEventListener('seeked', (e) => {
+   if (e.target.currentTime < lastTime) {
+     loops++;
+   }
+   if (loops >= maxLoops) {
+     e.target.pause();
+   }
+   lastTime = e.target.currentTime;
+ });    
 </script>
 
 <div class='mute' onclick="togglePlay();$(this).toggleClass('unmute')"></div>
