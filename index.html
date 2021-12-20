@@ -94,8 +94,9 @@
 function toggleFullScreen() {
    var doc = window.document;
    var docEl = doc.documentElement;
+   var navhide = navigationUI: "hide";
 
-   var requestFullScreen = docEl.requestFullscreen({ navigationUI: "hide" }) || docEl.mozRequestFullScreen({ navigationUI: "hide" }) || docEl.webkitRequestFullScreen({ navigationUI: "hide" }) || docEl.msRequestFullscreen({ navigationUI: "hide" });
+   var requestFullScreen = docEl.requestFullscreen({navhide}) || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
    var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
 
    if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
